@@ -344,6 +344,11 @@
 							<artifactId>wagon-ssh-external</artifactId>
 							<version>2.6</version>
 						</dependency>
+						<dependency>
+							<groupId>org.apache.maven.doxia</groupId>
+							<artifactId>doxia-module-markdown</artifactId>
+							<version>1.5</version>
+						</dependency>
 					</dependencies>
 				</plugin>
 
@@ -462,6 +467,25 @@
 							<report>cim</report>
 							<report>modules</report>
 							<report>dependency-management</report>
+						</reports>
+					</reportSet>
+				</reportSets>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-changelog-plugin</artifactId>
+				<version>2.2</version>
+				<reportSets>
+					<reportSet>
+						<id>dual-report</id>
+						<configuration>
+							<type>range</type>
+							<range>365</range>
+						</configuration>
+						<reports>
+							<report>changelog</report>
+							<report>file-activity</report>
 						</reports>
 					</reportSet>
 				</reportSets>
