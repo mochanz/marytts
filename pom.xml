@@ -482,6 +482,8 @@
 						<configuration>
 							<type>range</type>
 							<range>365</range>
+							<displayFileRevDetailUrl>${project.scm.url}/blob/%REV%/%FILE%</displayFileRevDetailUrl>
+							<displayFileDetailUrl>${project.scm.url}/blob/master/%FILE%</displayFileDetailUrl>
 						</configuration>
 						<reports>
 							<report>changelog</report>
