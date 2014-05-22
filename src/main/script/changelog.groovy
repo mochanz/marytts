@@ -36,8 +36,6 @@ http.request(GET){
 
 // Get issue since latest release date
 def outputFile = new File(properties['outputFile'])
-def outputFile2 = new File('output.txt')
-outputFile2.write(properties['outputFile'])
 outputFile.write("#Closed Issues "+ln+"from **"+latestReleaseName+"** until **current release**"+ ln)
 outputFile << ln
 outputFile << "|Author|Issue|Title|Created Date|Closed Date| $ln"
