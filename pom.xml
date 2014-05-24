@@ -477,7 +477,8 @@
 							<properties>
 								<org>marytts</org>
 								<repo>marytts</repo>
-								<outputFile>${project.basedir}/src/site/markdown/closedIssue-${project.version}.md</outputFile>
+								<outputDir>${project.basedir}/src/site/markdown/</outputDir>
+								<outputFile>closedIssue-${project.version}.md</outputFile>
 							</properties>
 							<source>${project.basedir}/src/main/script/changelog.groovy</source>
 						</configuration>

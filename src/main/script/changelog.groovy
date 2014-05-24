@@ -35,7 +35,12 @@ http.request(GET){
 }
 
 // Get issue since latest release date
-def outputFile = new File(properties['outputFile'])
+def filePath = properties['outputDir'] + properties['outputFile']
+def outputFolder = new File(properties['outputDir'])
+if(!outputFolder.exists()){
+	outputFolder.mkdirs()
+}
+def outputFile = new File(filePath)
 outputFile.write("#Closed Issues "+ln+"from **"+latestReleaseName+"** until **current release**"+ ln)
 outputFile << ln
 outputFile << "|Author|Issue|Title|Created Date|Closed Date| $ln"
